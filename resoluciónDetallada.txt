@@ -1,0 +1,14 @@
+Solución:
+
+1° Crear una nueva base de datos en phpMyAdmin e importar los dos archivos sql proporcionados.
+
+En un nuevo directorio:
+
+2° Crear la estructura del proyecto con las carpetas 'Controllers', 'Models' y 'Views'.
+3° Crear una carpeta llamada 'BD' con un archivo .php dentro, que contenga la conexión a la base de datos.
+4° Crear el modelo 'Tarea.php' y dentro de este crear la clase 'Tarea'. Esta clase contiene el metodo '__construct' que se encarga de la conexión a la base de datos y a su vez contiene el metodo 'recuperarInformacion()'. Este metodo recupera la información requerida mediante una consulta SELECT que contiene sentencias INNER JOIN para relacionar las distintas tablas.
+5° Dentro de la carpeta 'Controllers' Creamos el controlador 'ListaController'.
+6° Dentro de este controlador se encuentra el metodo '__construct' que se encarga de instanciar al modelo 'Tarea'. El controlador tambien contiene el temodo 'inicio()' que se encarga de llamar al metodo 'recuperarInformación()' y guardar el resultado en una variable, luego requerimos la vista 'index.php'. 
+7° Dentro de la carpeta 'Views' creamos la vista 'index.php'. En este archivo se encuentra el codigo HTML que se encarga de mostrar la tabla con la información que recuperamos en el controlador. Esta tabla contiene clases de bootstrap para dar estilo y mayor legibilidad.  
+
+
